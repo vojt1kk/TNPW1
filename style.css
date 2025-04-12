@@ -1,0 +1,181 @@
+body{
+    font-family: "Jetbrains Mono", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #212121;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: #00d9ff;
+    transition: 0.3s;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    background-image: url(images/hero2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: -170px;
+}
+
+.neoprint-title{
+    margin-bottom: 0.5rem;
+}
+
+.neoprint-description{
+    margin-top: 0.5rem;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 300px;
+    left: 0;
+    width: 28%;
+    margin-left: 5.05vw;
+    color: white;
+}
+
+.button1{
+    background-color: rgb(255, 81, 0);
+    color: white;
+    width: 5vw;
+    height: 4vh;
+    cursor: pointer;
+    border-radius: 2vh;
+    border-style: none;
+    outline: 2px solid white;
+    outline-offset: 2px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s, outline-color 0.3s;
+}
+
+.button1:hover{
+    font-size: 0.9rem;
+    background-color: white;
+    color: rgb(255, 81, 0);
+    outline: 2px solid rgb(255, 81, 0);
+    outline-offset: 4px;
+    transition: background-color 0.3s, color 0.3s, outline-color 0.3s; 
+}
+
+.button2{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 5vw;
+    height: 4vh;
+    cursor: pointer;
+    border-radius: 2vh;
+    border-style: none;
+    outline: 2px solid white;
+    outline-offset: 2px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s, outline-color 0.3s;
+}
+
+.button2:hover{
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(255, 81, 0);
+    outline: 2px solid white;
+    outline-offset: 4px;
+    transition: background-color 0.3s, color 0.3s, outline-color 0.3s; 
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.button3{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    font-family: "JetBrains Mono", serif;
+    transition: 0.3s;
+}
+
+.button3:hover{
+    color: rgb(0, 217, 255);
+    transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    *{
+        max-width: 100%;
+        box-sizing: border-box; /*vsechny boxy respektuji viewport*/
+    }
+
+    .hero{
+        content: url(images/hero2-mobil.jpg);
+        background-position: center;
+    }
+
+    .hero-text{
+        margin-left: 65vw;
+    }
+
+    h1{
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size: 0.9rem;
+    }
+
+    h3{
+        font-size: 0.8rem;
+    }
+
+    p{
+        font-size: 0.6rem;
+    }
+    
+    .button1{
+        font-size: 0.6rem;
+        width: 8vw;
+        height: 3vh;
+        border-radius: 1.5vh;
+    }
+
+    .button1:hover{
+        font-size: 0.6rem;
+    }
+
+    .button2{
+        font-size: 0.6rem;
+        width: 8vw;
+        height: 3vh;
+        border-radius: 1.5vh;
+    }
+
+    .button2:hover{
+        font-size: 0.6rem;
+    }
+
+    .button3{
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    body{
+        font-size: 0.9rem;
+    }
+}

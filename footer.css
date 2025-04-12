@@ -1,0 +1,42 @@
+footer{
+    width: 100%;
+    color: white;
+    background-color: #19191c;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 50px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+li{
+    cursor: pointer;
+    width: 10%;
+}
+
+.ficons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+.icon{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 6px;
+}

@@ -1,0 +1,189 @@
+.boxy{
+    position: relative;
+    background-image: url("images/bg.png");
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.boxy1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: fit-content;
+    margin: auto;
+    background-color: transparent;
+    margin-bottom: 50px;
+}
+
+.box{
+    background-color: #19191c;
+    color: white;
+    width: 18vw;
+    aspect-ratio: 1/1;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 30px;
+    text-align: justify;
+}
+
+.box h3{
+    color: rgb(0, 217, 255);
+}
+
+
+/*filament*/
+.filament-nadpis{
+    margin-left: 4.53vw;
+    color: white;
+}
+
+.filament{
+    margin: auto;
+    background-color: #19191c;
+    color: white;
+    width: 88.5vw;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.filament-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 65%;
+    text-align: justify;
+}
+
+.filament-text h2{
+    color: rgb(0, 217, 255);
+}
+
+.yoda{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.no1{
+    width: 15vw;
+}
+
+.boxy2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: fit-content;
+    margin: auto;
+    background-color: transparent;
+    margin-bottom: 50px;
+}
+
+
+
+/*resin*/
+.resin-nadpis{
+    margin-left: 4.53vw;
+    color: white;
+}
+
+.resin{
+    margin: auto;
+    background-color: #19191c;
+    color: white;
+    width: 88.5vw;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.resin-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 65%;
+    text-align: justify;
+}
+
+.resin-text h2{
+    color: rgb(0, 217, 255);
+}
+
+.groot{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.no2{
+    height: 23vw;
+}
+
+.boxy3{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: fit-content;
+    margin: auto;
+    background-color: transparent;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 600px) {
+    .boxy1{
+        margin-top: 10vh;
+        position: relative;
+        width: max-content;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-content: center;
+    }
+    .boxy2{
+        position: relative;
+        width: max-content;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-content: center;
+    }
+    .boxy3{
+        position: relative;
+        width: max-content;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .box{
+        width: 100%;
+        max-width: 220px;
+        aspect-ratio: 1/1;
+        box-sizing: border-box;
+    }
+
+    .filament-text .p{
+        display: none;
+    }
+}
