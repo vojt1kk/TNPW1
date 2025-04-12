@@ -28,14 +28,17 @@ nav{
 
 @media (max-width: 600px) {
     header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
         width: 100%;
-        flex-direction: column;
         height: auto;
-        padding: 20px;
+        padding: 10px;
+        gap: 10px;
     }
     nav{
         display: flex;
-        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
         gap: 10px;
         height: auto;
@@ -46,6 +49,4 @@ nav{
     .logo{
         width: 30px;
     }
-
-    
 }

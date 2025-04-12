@@ -109,6 +109,22 @@ a:hover{
     transition: 0.3s;
 }
 
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+h3{
+    font-size: 1.3rem;
+}
+
+p{
+    font-size: 1.1rem;
+}
+
 @media (max-width: 600px) {
     body{
         margin: 0;
@@ -117,14 +133,10 @@ a:hover{
         overflow-x: hidden;
     }
 
-    *{
-        max-width: 100%;
-        box-sizing: border-box; /*vsechny boxy respektuji viewport*/
-    }
-
     .hero{
         content: url(images/hero2-mobil.jpg);
         background-position: center;
+        background-size: cover;
     }
 
     .hero-text{

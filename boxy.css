@@ -151,7 +151,7 @@
 
 @media (max-width: 600px) {
     .boxy1{
-        margin-top: 10vh;
+        margin-top: 20vh;
         position: relative;
         width: max-content;
         display:grid;
@@ -183,7 +183,7 @@
         box-sizing: border-box;
     }
 
-    .filament-text .p{
-        display: none;
+    .filament{
+
     }
 }
