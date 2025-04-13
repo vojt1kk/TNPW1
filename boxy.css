@@ -13,6 +13,7 @@
     width: 90vw;
     margin: auto;
     padding: 0;
+    margin-bottom: 5vh;
 }
 
 .box{
@@ -89,6 +90,7 @@
     width: 90vw;
     margin: auto;
     padding: 0;
+    margin-bottom: 5vh;
 }
 
 
@@ -180,9 +182,5 @@
         max-width: 220px;
         aspect-ratio: 1/1;
         box-sizing: border-box;
-    }
-
-    .filament{
-
     }
 }
