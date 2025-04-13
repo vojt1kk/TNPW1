@@ -36,11 +36,14 @@ a:hover{
 
 .hero-text {
     position: absolute;
-    bottom: 300px;
-    left: 0;
+    bottom: 32vh;
     width: 28%;
-    margin-left: 5.05vw;
+    margin-left: 5.4vw;
     color: white;
+}
+
+button{
+    font-family: "Jetbrains Mono", serif;
 }
 
 .button1{
