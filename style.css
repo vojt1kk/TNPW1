@@ -164,7 +164,7 @@ p{
     
     .button1{
         font-size: 0.6rem;
-        width: 8vw;
+        width: fit-content;
         height: 3vh;
         border-radius: 1.5vh;
     }

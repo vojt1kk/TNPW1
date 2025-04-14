@@ -186,29 +186,51 @@
     }
 
     .filament{
-        flex-direction: column;
+        flex-direction: column-reverse;
         width: 78.35vw;
         height: fit-content;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        gap: 10px;
     }
 
     .filament-text{
         width: 85%;
     }
 
+    .yoda{
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+    }
+
+    .no1{
+        width: 25vw;
+    }
+
     .resin{
         flex-direction: column;
-        height: max-content;
         width: 78.35vw;
+        height: fit-content;
         padding-top: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
+        gap: 10px;
     }
 
     .resin-text{
         width: 80%;
     }
 
+    .groot{
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+
     .no2{
-        width: 23vw;
+        width: 30vw;
         height: auto;
     }
 
