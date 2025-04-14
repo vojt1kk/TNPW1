@@ -152,7 +152,7 @@
 
 @media (max-width: 600px) {
     .boxy1{
-        margin-top: 20vh;
+        margin-top: 12vh;
         position: relative;
         width: max-content;
         display:grid;
@@ -182,5 +182,34 @@
         max-width: 220px;
         aspect-ratio: 1/1;
         box-sizing: border-box;
+        text-align: center;
     }
+
+    .filament{
+        flex-direction: column;
+        width: 78.35vw;
+        height: fit-content;
+    }
+
+    .filament-text{
+        width: 85%;
+    }
+
+    .resin{
+        flex-direction: column;
+        height: max-content;
+        width: 78.35vw;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .resin-text{
+        width: 80%;
+    }
+
+    .no2{
+        width: 23vw;
+        height: auto;
+    }
+
 }

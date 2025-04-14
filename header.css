@@ -28,18 +28,13 @@ nav{
 
 @media (max-width: 600px) {
     header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         height: auto;
         padding: 10px;
         gap: 10px;
     }
     nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
         height: auto;
     }
     .nazev-text{
