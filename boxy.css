@@ -242,4 +242,110 @@
         height: auto;
     }
 
+<<<<<<< Updated upstream
+=======
+}
+
+@media (min-width: 601px) and (max-width: 1100){
+    .boxy1{
+        margin-top: 12vh;
+        position: relative;
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3vw;
+    }
+    .boxy2{
+        position: relative;
+        width: max-content;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-content: center;
+    }
+    .boxy3{
+        position: relative;
+        width: max-content;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .box{
+        width: 100%;
+        max-width: 220px;
+        aspect-ratio: 1/1;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .filament-nadpis{
+        margin-left: 10.8vw;
+    }
+
+    .filament{
+        flex-direction: column-reverse;
+        width: 78.35vw;
+        height: fit-content;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        gap: 10px;
+    }
+
+    .filament-text{
+        width: 85%;
+    }
+
+    .yoda{
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+    }
+
+    .no1{
+        width: 25vw;
+    }
+
+    .resin-nadpis{
+        margin-left: 10.8vw;
+    }
+
+    .resin{
+        flex-direction: column;
+        width: 78.35vw;
+        height: fit-content;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        gap: 10px;
+    }
+
+    .resin-text{
+        width: 80%;
+    }
+
+    .groot{
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .no2{
+        width: 30vw;
+        height: auto;
+    }
+
+}
+
+/*tablet*/
+@media (min-width: 1101px) and (max-width: 1440px) {
+    .box{
+        text-align: center;
+        width: 17vw;
+        aspect-ratio: 1/1;
+    }
+>>>>>>> Stashed changes
 }

@@ -60,3 +60,9 @@ li:hover{
         width: fit-content;
     }
 }
+
+@media (min-width: 601px) and (max-width: 1440px) {
+    footer ul li{
+        width: fit-content;
+    }
+}
