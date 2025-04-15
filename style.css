@@ -10,7 +10,7 @@ a{
     color: white;
 }
 
-a:hover{
+nav a:hover{
     color: #00d9ff;
     transition: 0.3s;
 }
@@ -44,6 +44,10 @@ a:hover{
 
 button{
     font-family: "Jetbrains Mono", serif;
+}
+
+button a:hover{
+    color: rgb(255, 81, 0);
 }
 
 .button1{
@@ -191,19 +195,46 @@ p{
 }
 
 @media (min-width: 601px) and (max-width: 1440px) {
+    * {
+        outline: 1px solid red;
+      }
+      
+    body{
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
     h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
-
+    
     h2{
-        font-size: 1.8rem;
+        font-size: 1.35rem;
     }
-
+    
     h3{
-        font-size: 1.3rem;
+        font-size: 1.05rem;
+    }
+    
+    p{
+        font-size: 0.85rem;
     }
 
-    p{
-        font-size: 1.1rem;
+    .hero-text .button1{
+        width: fit-content;
+    }
+
+    .button1{
+        font-size: 0.8rem;
+    }
+
+    .button2{
+        font-size: 0.8rem;
+    }
+
+    .button3{
+        font-size: 0.8rem;
     }
 }
