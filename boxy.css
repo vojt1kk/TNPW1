@@ -1,10 +1,3 @@
-.boxy{
-    position: relative;
-    background-image: url("images/bg.png");
-    background-size: cover;
-    background-repeat: repeat;
-}
-
 .boxy1{
     display: flex;
     justify-content: space-between;
@@ -21,10 +14,10 @@
     color: white;
     width: 18vw;
     aspect-ratio: 1/1;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -150,6 +143,10 @@
     margin-bottom: 2vh;
 }
 
+@media (max-width: 500px) {
+    
+}
+
 @media (max-width: 600px) {
     .boxy1{
         margin-top: 12vh;
@@ -157,7 +154,7 @@
         width: max-content;
         display:grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 2vw;
         justify-content: center;
     }
     .boxy2{
@@ -165,7 +162,7 @@
         width: max-content;
         display:grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 2vw;
         justify-content: center;
     }
     .boxy3{
@@ -173,7 +170,7 @@
         width: max-content;
         display:grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 2vw;
         justify-content: center;
     }
 
@@ -242,8 +239,7 @@
         height: auto;
     }
 
-<<<<<<< Updated upstream
-=======
+
 }
 
 @media (min-width: 601px) and (max-width: 1100){
@@ -347,5 +343,4 @@
         width: 17vw;
         aspect-ratio: 1/1;
     }
->>>>>>> Stashed changes
 }

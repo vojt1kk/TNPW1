@@ -25,6 +25,7 @@ ul{
 li{
     width: 10%;
     font-size: 0.8rem;
+    width: fit-content;
 }
 
 li:hover{
