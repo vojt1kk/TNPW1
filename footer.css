@@ -1,15 +1,15 @@
 footer{
-    width: 100%;
+    width: 100vw;
     color: white;
     background-color: #19191c;
-    height: 300px;
+    height: 20vw;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0;
-    gap: 50px;
+    gap: 3vw;
 }
 
 ul{
@@ -19,12 +19,12 @@ ul{
     list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 2vw;
 }
 
 li{
-    width: 10%;
-    font-size: 0.8rem;
+    width: 10vw;
+    font-size: 1vw;
     width: fit-content;
 }
 
@@ -36,37 +36,13 @@ li:hover{
 .ficons{
     display: flex;
     justify-content: center;
-    gap: 20px;
-    width: 100%;
+    gap: 2vw;
+    width: 100vw;
 }
 .icon{
     background-color: white;
     width: 2vw;
     aspect-ratio: 1/1;
-    border-radius: 50%;
-    padding: 6px;
+    border-radius: 2vw;
+    padding: 0.6vw;
 }
-<<<<<<< Updated upstream
-
-@media (max-width: 600px){
-    footer{
-        height: 20vh;
-        gap: 20px;
-    }
-
-    ul{
-        width: fit-content;
-    }
-
-    footer ul li{
-        width: fit-content;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 1440px) {
-    footer ul li{
-        width: fit-content;
-    }
-}
-=======
->>>>>>> Stashed changes
