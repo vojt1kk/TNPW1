@@ -44,6 +44,7 @@ li:hover{
     aspect-ratio: 1/1;
     border-radius: 50%;
     padding: 6px;
+<<<<<<< Updated upstream
 }
 
 @media (max-width: 600px){
@@ -59,4 +60,6 @@ li:hover{
     footer ul li{
         width: fit-content;
     }
+=======
+>>>>>>> Stashed changes
 }

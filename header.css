@@ -26,6 +26,7 @@ nav{
     width: 30%;
 }
 
+<<<<<<< Updated upstream
 @media (max-width: 600px) {
     header{
         width: 100%;
@@ -44,3 +45,5 @@ nav{
         width: 30px;
     }
 }
+=======
+>>>>>>> Stashed changes

@@ -30,7 +30,7 @@
     justify-content: flex-start;
     align-items: center;
     border-radius: 30px;
-    text-align: justify;
+    text-align: center;
 }
 
 .box h3{
@@ -150,6 +150,7 @@
     margin-bottom: 2vh;
 }
 
+<<<<<<< Updated upstream
 @media (max-width: 600px) {
     .boxy1{
         margin-top: 12vh;
@@ -249,4 +250,8 @@
         width: 17vw;
         aspect-ratio: 1/1;
     }
+=======
+@media (max-width: 1440px) {
+    
+>>>>>>> Stashed changes
 }
