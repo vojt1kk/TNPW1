@@ -142,3 +142,36 @@
     gap: 1.5vw;
     margin-bottom: 5vw;
 }
+
+
+@media (max-width: 700px) {
+    .boxy1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: fit-content;
+        gap: 2vw;
+    }
+
+    .boxy2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: fit-content;
+        gap: 2vw;
+    }
+
+    .boxy3{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: fit-content;
+        gap: 2vw;
+    }
+
+    .box{
+        width: 32.4vw;
+        border-radius: 3.6vw;
+        padding-left: 3.6vw;
+        padding-right: 3.6vw;
+        padding-top: 3.6vw;
+        padding-bottom: 3.6vw;
+    }
+}

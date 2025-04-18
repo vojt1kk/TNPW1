@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form method="post">
-        <label>Jméno:</label><br />
-        <input type="text" name="jmeno" /><br />
-        <label>Přijmení:</label><br />
-        <input type="text" name="prijmeni" /><br />
+    <form action="https://www.hashemian.com/tools/form-post-tester.php" method="post" class="form">
+        <label>
+            Jméno: <input type="text" required="required" name="name">
+        </label>
+        <label>
+            Příjmení: <input type="text" required="required" name="surname">
+        </label>
+        <label>
+            Adresa: <input type="text" required="required" name="adresa">
+        </label>
+        <label>
+            Email: <input type="email" required="required" name="email">
+        </label>
+
+
+        <input type="submit">
     </form>
 </body>
 </html>

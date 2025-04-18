@@ -3,6 +3,13 @@ body{
     margin: 0;
     padding: 0;
     background-color: #212121;
+    color: white;
+}
+
+.gap-pozadi{
+    width: 100%;
+    background-color: blue;
+    height: 70vh;
 }
 
 a{
@@ -13,31 +20,6 @@ a{
 a:hover{
     color: #00d9ff;
     transition: 0.3s;
-}
-
-.hero{
-    width: 100vw;
-    background-image: url(images/hero2.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: -5vw;
-}
-
-.neoprint-title{
-    margin-bottom: 0.5vw;
-}
-
-.neoprint-description{
-    margin-top: 0.5vw;
-}
-
-.hero-text {
-    position: absolute;
-    top: 28vw;
-    width: 30vw;
-    margin-left: 5vw;
-    color: white;
 }
 
 button{
@@ -127,6 +109,38 @@ h3{
 
 p{
     font-size: 1vw;
+}
+
+/*text+boxy*/
+.nadpis{
+    margin-left: 5vw;
+}
+
+.box{
+    background-color: #19191c;
+    color: white;
+    width: 18vw;
+    aspect-ratio: 1/1;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 2vw;
+    text-align: center;
+}
+
+.boxy1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+    padding: 0;
+    gap: 1.5vw;
+    margin-bottom: 5vh;
 }
 
 @media (max-width: 700px) {
