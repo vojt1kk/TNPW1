@@ -1,24 +1,55 @@
 .hero{
     background-image: url("images/resin.jpg");
-    width: 100vw;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-bottom: -15vw;
+    width: 100%;
+    height: auto; 
+    max-height: 40vw; 
+    object-fit: cover; /*aby se pozadi nenatahovalo*/
+    display: block; /*odstrani mezery pod pozadim*/
+    margin-bottom: -10vw;
 }
 
-.fa-arrow-left{
+.fa-arrow-left {
+    position: absolute;
     top: 2vw;
     margin-left: 5vw;
-    position: absolute;
     font-size: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    border-color: transparent;
+    transition: 0.3s;
 }
 
-.fa-arrow-right{
-    font-size: 2vw;
+.fa-arrow-left:hover {
+    background-color: white;
+    color: black;
     border-color: white;
-    border-width: 1px;
-    offset: 30px;
-    border-radius: 30px;
+}
+
+.fa-arrow-right {
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    border-color: transparent;
+    outline: white;
+    transition: 0.3s;
+}
+
+.fa-arrow-right:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
 }
 
 body{
