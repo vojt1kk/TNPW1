@@ -37,8 +37,8 @@
     align-items: center;
     justify-content: center;
     width: 3vw;
-    height: 3vw;
-    border-radius: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
     background-color: transparent;
     color: white;
     border-color: transparent;
@@ -80,23 +80,26 @@ button{
     font-family: "Jetbrains Mono", serif;
 }
 
-.button1{
+.button-primary{
     background-color: rgb(255, 81, 0);
     font-size: 0.9vw;
     color: white;
     width: fit-content;
     padding-left: 0.6vw;
     padding-right: 0.6vw;
-    height: 2.8vw;
+    height: 2.4vw;
     cursor: pointer;
-    border-radius: 1.4vw;
+    border-radius: 1.2vw;
     border-style: none;
     outline: 0.15vw solid white;
     outline-offset: 0.2vw;
     transition: background-color 0.3s, color 0.3s, outline-color 0.3s;
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
 }
 
-.button1:hover{
+.button-primary:hover{
     background-color: white;
     color: rgb(255, 81, 0);
     outline: 0.15vw solid rgb(255, 81, 0);
@@ -104,23 +107,23 @@ button{
     transition: background-color 0.3s, color 0.3s, outline-color 0.3s; 
 }
 
-.button2{
+.button-secondary{
     background-color: rgba(255, 255, 255, 0.2);
     font-size: 0.9vw;
     color: white;
     width: fit-content;
-    height: 2.8vw;
+    height: 2.4vw;
     padding-left: 1vw;
     padding-right: 1vw;
     cursor: pointer;
-    border-radius: 1.4vw;
+    border-radius: 1.2vw;
     border-style: none;
     outline: 0.15vw solid white;
     outline-offset: 0.2vw;
     transition: background-color 0.3s, color 0.3s, outline-color 0.3s;
 }
 
-.button2:hover{
+.button-secondary:hover{
     background-color: rgba(255, 255, 255, 0.8);
     color: rgb(255, 81, 0);
     outline: 0.15vw solid white;
@@ -128,12 +131,12 @@ button{
     transition: background-color 0.3s, color 0.3s, outline-color 0.3s; 
 }
 
-.buttons{
+.hero-buttons{
     display: flex;
     gap: 1.5vw;
 }
 
-.button3{
+.button-other{
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -144,7 +147,7 @@ button{
     transition: color 0.3s;
 }
 
-.button3:hover{
+.button-other:hover{
     color: rgb(0, 217, 255);
     transition: 0.3s;
 }
@@ -284,6 +287,59 @@ p{
     align-items: center;
     gap: 2vw;
 }
+
+footer{
+    width: 100vw;
+    color: white;
+    background-color: #19191c;
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3vw;
+    gap: 2vw;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+li{
+    font-size: 1vw;
+    width: fit-content;
+}
+
+li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.ficons{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    width: 100vw;
+}
+.icon{
+    background-color: white;
+    width: 2vw;
+    aspect-ratio: 1/1;
+    border-radius: 2vw;
+    padding: 0.6vw;
+}
+
+.copyright{
+    font-size: 0.7vw;
+}
+
 
 
 @media (max-width: 700px) {

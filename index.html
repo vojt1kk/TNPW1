@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +7,19 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="boxy.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="icon" href="images/logo3.png">
+    <link rel="icon" href="images/logo.png">
     <script src="efekty.js" defer></script>
 </head>
 <body>
     <header>
         <div class="nazev">
             <a href="index.html">
-                <img src="images/logo3.png" alt="logo" class="logo">
+                <img src="images/logo.png" alt="logo" class="logo">
             </a>
             <a href="index.html" class="nazev-text">
                 <h2>NeoPrint</h2>
@@ -26,37 +27,34 @@
         </div>
 
         <nav>
-            <a href="https://www.jetbrains.com">
-                <button class="button-other">O nás</button>
-            </a>
-            <a href="https://www.jetbrains.com">
-                <button class="button-other">Naše pobočky</button>
-            </a>
+            <a href="https://www.jetbrains.com" class="button-other">O nás</a>
+            <a href="https://www.jetbrains.com" class="button-other">Naše pobočky</a>
             <div class="dropdown-menu">
-                <button class="button-other" id="tisk">Tisk</button>
+                <button class="button-other" id="tisk">
+                    Tisk
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
                 <div class="dropdown-links" id="dropdownLinks">
                     <a href="tisk-filament.html">Filamentový tisk</a>
                     <a href="tisk-resin.html">Resinový tisk</a>
                 </div>
             </div>
-            <a href="kontakt.html">
-                <button class="button-primary">Kontakt</button>
-            </a>
-        </nav>
+            <a href="kontakt.html" class="button-primary">Kontakt</a>
+        </nav>        
     </header>
 
     <!-- Hero section -->
-    <img src="images/main.jpg" alt="pozadi" class="hero">
+    <div class="hero"></div>
     <div class="hero-text">
-        <b><h1 class="neoprint-title">NeoPrint</h1></b>
+        <h1 class="neoprint-title">NeoPrint</h1>
         <p class="neoprint-description">Jsme inovativní firma zaměřená na výrobu a prodej součástek pomocí 3D tisku. Využíváme moderní technologie a kvalitní materiály, abychom našim zákazníkům nabídli precizně zpracované produkty na míru jejich potřebám.</p>
-        <div class="buttons">
-            <button class="button-primary">Náš Tisk</button>
-            <button class="button-secondary">Více</button>
+        <div class="hero-buttons">
+            <button class="button-primary" onclick="document.getElementById('nasTiskSlide').scrollIntoView({behavior: 'smooth'})">Náš Tisk</button>
+            <button class="button-secondary" onclick="document.getElementById('viceSlideIn').scrollIntoView({ behavior: 'smooth'})">Více</button>
         </div>
     </div>
     <!--boxy-->
-    <div class="boxy">
+    <div class="boxy" id="viceSlideIn">
         <div class="boxy1">
             <div class="box">
                 <h3>O nás</h3>
@@ -84,15 +82,13 @@
             </div>
         </div>
     
-        <h1 class="filament-nadpis">Filamentový tisk:</h1>
+        <h1 class="filament-nadpis" id="nasTiskSlide">Filamentový tisk:</h1>
     
         <div class="filament">
             <div class="yoda">
                 <img src="images/yoda2b.png" alt="ukazka" class="no1">
-                <a href="https://www.jetbrains.com">
-                    <button class="button-primary">
-                        Objednat
-                    </button>
+                <a href="tisk-filament.html" class="button-primary">
+                    Objednat
                 </a>
             </div>
             <div class="filament-text">
@@ -157,10 +153,8 @@
             </div>
             <div class="groot">
                 <img src="images/groot.png" alt="ukazka" class="no2">
-                <a href="https://www.jetbrains.com">
-                    <button class="button-primary">
-                        Objednat
-                    </button>
+                <a href="tisk-resin.html" class="button-primary">
+                    Objednat
                 </a>
             </div>
         </div>
@@ -196,10 +190,10 @@
     <!--footer-->
     <footer>
         <div class="ficons">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAm5JREFUaEPtWTlOBDEQrH0DDyEmAmJ+gAh4ABkJEYcIyEh4AxK/ADISvsF+gBxoZEsty+2u9s7MMmJGWmkPH13V5T68K8z8Wc3cfiwAtu3BxQNz9cABAHntJwDyvve5SRNfftaUV+iJSugawFVoh/hgAST7UA8LQBgWwzdhmjJIDaKAMABqrGdXv/a4XRmZCREp1sg59NZnAHwV1FHMROlO40uyhCgBYT4egHJBl5FOw/U08cQzKyUPgGZ/DOZ3AJwCOALwDkD2+EyHWAcLk7gWAM2E68pO5s8APKi59wDO02dNXhcALZ9e9vPBtOL7HYALBeANwF76LDLK8839Wx7oBSDzrKhSGnIM4FEBuARwWwFgKqAFgHKh2jyS5DSQEwC7AD4APAFYpzUpCQ8FIGJ8xuzJsoxGVVuHAGAlOjEwaz/XTmUZ0gIxGYAy0bVyRQ2sReIkAEqDPFmIfNhENSgAi6XeRKdDpBVhJgcQKTMY45gxzaZes1vzALVBI0N7YZpan41C/wLA7CQk6mAOY01FZfTq9jArIYvdnn6BDb2DnoGWPCIdW2mUeGeriUwMqGXXXEboUqJ2KfAnSgkLhNfjeFl7YwnpA8pEmEhF6hlfIyVcjVIdUYVmC4jISa5h2EsrvU5XQ0Mt4OjEaylb0ykCt93UtwBQhSILQDZidOsdXPZ3JtH9ruXdC/UkKtZIaxzbL1AAynJhbE9EOjYaQC17ZiCZxfC9vqK/9T+DK1tPQnmfSIzfVEJ5PpN73DNQGjMFkNA1JuuBGhD5zrqBi3ghy0//1UTP7wVAbzD2wAXA2Ax76y8e8Bga+/fZe+Abntu2MfzR5rcAAAAASUVORK5CYII=" class="icon"/>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAQlJREFUaEPtl2EOwiAMhbuTOU+mnsx5MrXJSPhRCG3BFff4tRji+t77KN1Ck69l8voJAo5OEAmcJYE7EV12sWsmetufH0SUnlWejEaIC781VHSNKOD5LSp3u6YjnIBW55OocALeDdjkW0IJYGwYH80KJaCGT+o2po4jOTKiC9UOr9npUpy/FMCus4CuCwIEO0sIIYGjD3G4BLjfS3NObXwotU/z4fYcYsuF1b0bRhDgQgsCOtxK0yfA8xHPT6blQYhfKL249AXGTr+EKvl383DnFSC5hptYwxISwDCn4UXYC4SAEBByOgCEnAaiCwEhIOR04B8R6m9J5R9HdCEI0DiABDRujdg7fQIffyhLMbkCEtYAAAAASUVORK5CYII=" class="icon"/>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAehJREFUaEPtWAlOBDEM674MeBnwMuBlIMN4FY06bdyEVit1pNUe0xyO3WS2t/Lg1+3B8y8bwGoGNwObgWAFtoQGCvhcSnk97PD5/fj8WUrBS7paDMC57LARnYnj/eoCmDdzE2u53v5+X9ICQIOqoVSmv6RY9Z6pLRqTPwNzAfg+Vl0a9zI57ivJ11w2418xAOQfxlsEBPy0ZNOqA9hAbLD3dZLXr50XAIOoQKLVt+CquaoA4FABkQGALFQbyggAhY2IfBAHSb+0NNbqQt7g7OO1buX1cZUjkm+28t4csBvZ03QIhtXD5hvdwPARAgAHGRr2AE9ngBMQ9NnRH0lmxLb7rBbZxCMJqTbDABCIk1gNmrW+24Fagwz3oh0kCsQ1b7K7UDRpa9/tQD0GVnehrv49AFaBcMnHC4Ag8O59po9KyVX9EQBPwcnqAeauvgJgZkt1V18BMOuRQqq+AmDGZnYNrrMGJbr++eHO1fejAGgPSWVuaFk6TERlwBbAc86T3nUyGciYCUOysSAUBrIqjvjNP+oe2noSosa5LvK38JzPsN5rwHpHixkyYdy0qqsSigwxJk3ZKOpwrVX3AKWEFoqL3+3RB44A+T3zdLsKSAHgqsjsRRvA7IpnDbLVed/jbwmtpmIzsJqBH2ISVjEWJgWZAAAAAElFTkSuQmCC" class="icon"/>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAWFJREFUaEPtmFkOwjAMRNuTAScDTgacDDoSQWnrNIvtLML9QSJp6jdjZ5unwZ958PgnA2jtoDlgDjAVsBRiCsh+/S8cOH9lwu8pIJnrk6vok3jh5f2HdqrPr8uRAwjqugxQGlwuTKj/fWm4hRqPAN5SEQiNc6HcCAGAGOr39CCVALF6KACkzKOnyL1Ydi5QAD2q7xiGB9gVNOUA0qf1zBPK4F0daABAJa0JoAqAE0WjlpIAuPP/1lVpkNX4VApJAyCfUVNuZefO0E0AXNASbjQFkAAxgFgOa+9wmzgguTWvDiBRuL7rUQDuVqL5QsYFwI5R6ySXtBJzAWJFzmkfHiBpO93ziWx4gKQTGXK0xzogr1dCq2aPaUTGGrtalF6ESmYgzDxQn7yhiwH4e3n38e31Ivf8HLpedP8XXy2WqFX9nRQHqgeV80EDyFFLo685oKFqzpjmQI5aGn3NAQ1Vc8b8ALZvQDGD0BclAAAAAElFTkSuQmCC" class="icon"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAm5JREFUaEPtWTlOBDEQrH0DDyEmAmJ+gAh4ABkJEYcIyEh4AxK/ADISvsF+gBxoZEsty+2u9s7MMmJGWmkPH13V5T68K8z8Wc3cfiwAtu3BxQNz9cABAHntJwDyvve5SRNfftaUV+iJSugawFVoh/hgAST7UA8LQBgWwzdhmjJIDaKAMABqrGdXv/a4XRmZCREp1sg59NZnAHwV1FHMROlO40uyhCgBYT4egHJBl5FOw/U08cQzKyUPgGZ/DOZ3AJwCOALwDkD2+EyHWAcLk7gWAM2E68pO5s8APKi59wDO02dNXhcALZ9e9vPBtOL7HYALBeANwF76LDLK8839Wx7oBSDzrKhSGnIM4FEBuARwWwFgKqAFgHKh2jyS5DSQEwC7AD4APAFYpzUpCQ8FIGJ8xuzJsoxGVVuHAGAlOjEwaz/XTmUZ0gIxGYAy0bVyRQ2sReIkAEqDPFmIfNhENSgAi6XeRKdDpBVhJgcQKTMY45gxzaZes1vzALVBI0N7YZpan41C/wLA7CQk6mAOY01FZfTq9jArIYvdnn6BDb2DnoGWPCIdW2mUeGeriUwMqGXXXEboUqJ2KfAnSgkLhNfjeFl7YwnpA8pEmEhF6hlfIyVcjVIdUYVmC4jISa5h2EsrvU5XQ0Mt4OjEaylb0ykCt93UtwBQhSILQDZidOsdXPZ3JtH9ruXdC/UkKtZIaxzbL1AAynJhbE9EOjYaQC17ZiCZxfC9vqK/9T+DK1tPQnmfSIzfVEJ5PpN73DNQGjMFkNA1JuuBGhD5zrqBi3ghy0//1UTP7wVAbzD2wAXA2Ax76y8e8Bga+/fZe+Abntu2MfzR5rcAAAAASUVORK5CYII=" alt="instagram" class="icon"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAQlJREFUaEPtl2EOwiAMhbuTOU+mnsx5MrXJSPhRCG3BFff4tRji+t77KN1Ck69l8voJAo5OEAmcJYE7EV12sWsmetufH0SUnlWejEaIC781VHSNKOD5LSp3u6YjnIBW55OocALeDdjkW0IJYGwYH80KJaCGT+o2po4jOTKiC9UOr9npUpy/FMCus4CuCwIEO0sIIYGjD3G4BLjfS3NObXwotU/z4fYcYsuF1b0bRhDgQgsCOtxK0yfA8xHPT6blQYhfKL249AXGTr+EKvl383DnFSC5hptYwxISwDCn4UXYC4SAEBByOgCEnAaiCwEhIOR04B8R6m9J5R9HdCEI0DiABDRujdg7fQIffyhLMbkCEtYAAAAASUVORK5CYII=" alt="facebook" class="icon"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAehJREFUaEPtWAlOBDEM674MeBnwMuBlIMN4FY06bdyEVit1pNUe0xyO3WS2t/Lg1+3B8y8bwGoGNwObgWAFtoQGCvhcSnk97PD5/fj8WUrBS7paDMC57LARnYnj/eoCmDdzE2u53v5+X9ICQIOqoVSmv6RY9Z6pLRqTPwNzAfg+Vl0a9zI57ivJ11w2418xAOQfxlsEBPy0ZNOqA9hAbLD3dZLXr50XAIOoQKLVt+CquaoA4FABkQGALFQbyggAhY2IfBAHSb+0NNbqQt7g7OO1buX1cZUjkm+28t4csBvZ03QIhtXD5hvdwPARAgAHGRr2AE9ngBMQ9NnRH0lmxLb7rBbZxCMJqTbDABCIk1gNmrW+24Fagwz3oh0kCsQ1b7K7UDRpa9/tQD0GVnehrv49AFaBcMnHC4Ag8O59po9KyVX9EQBPwcnqAeauvgJgZkt1V18BMOuRQqq+AmDGZnYNrrMGJbr++eHO1fejAGgPSWVuaFk6TERlwBbAc86T3nUyGciYCUOysSAUBrIqjvjNP+oe2noSosa5LvK38JzPsN5rwHpHixkyYdy0qqsSigwxJk3ZKOpwrVX3AKWEFoqL3+3RB44A+T3zdLsKSAHgqsjsRRvA7IpnDbLVed/jbwmtpmIzsJqBH2ISVjEWJgWZAAAAAElFTkSuQmCC" alt="twitter" class="icon"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAWFJREFUaEPtmFkOwjAMRNuTAScDTgacDDoSQWnrNIvtLML9QSJp6jdjZ5unwZ958PgnA2jtoDlgDjAVsBRiCsh+/S8cOH9lwu8pIJnrk6vok3jh5f2HdqrPr8uRAwjqugxQGlwuTKj/fWm4hRqPAN5SEQiNc6HcCAGAGOr39CCVALF6KACkzKOnyL1Ydi5QAD2q7xiGB9gVNOUA0qf1zBPK4F0daABAJa0JoAqAE0WjlpIAuPP/1lVpkNX4VApJAyCfUVNuZefO0E0AXNASbjQFkAAxgFgOa+9wmzgguTWvDiBRuL7rUQDuVqL5QsYFwI5R6ySXtBJzAWJFzmkfHiBpO93ziWx4gKQTGXK0xzogr1dCq2aPaUTGGrtalF6ESmYgzDxQn7yhiwH4e3n38e31Ivf8HLpedP8XXy2WqFX9nRQHqgeV80EDyFFLo685oKFqzpjmQI5aGn3NAQ1Vc8b8ALZvQDGD0BclAAAAAElFTkSuQmCC" alt="youtube" class="icon"/>
         </div>
         <ul>
             <li>O nás</li>

@@ -7,7 +7,7 @@ tiskButton.addEventListener('mouseenter', () => {
 
 tiskButton.addEventListener('mouseleave', () => {
     setTimeout(() => {
-        if (!dropdownContent.matches(':hover')) {
+        if (!dropdownLinks.matches(':hover')) {
             dropdownLinks.classList.remove('active');
         }
     }, 200);

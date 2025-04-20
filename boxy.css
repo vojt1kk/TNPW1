@@ -145,7 +145,7 @@
 }
 
 
-@media (max-width: 700px) {
+@media (min-width: 501px) and (max-width: 700px) {
     .boxy1{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -174,5 +174,106 @@
         padding-right: 3.6vw;
         padding-top: 3.6vw;
         padding-bottom: 3.6vw;
+    }
+
+    .filament-nadpis{
+        margin-left: 9.4vw;
+    }
+
+    .filament{
+        flex-direction: column-reverse;
+        height: fit-content;
+        width: 81.2vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+
+    .filament-text{
+        width: 65vw;
+    }
+
+    .yoda{
+        flex-direction: row;
+        gap: 5vw;
+    }
+
+    .no1{
+        width: 25vw;
+    }
+
+    .resin-nadpis{
+        margin-left: 9.4vw;
+    }
+
+    .resin{
+        flex-direction: column;
+        height: fit-content;
+        width: 81.2vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+
+    .resin-text{
+        width: 65vw;
+    }
+
+    .groot{
+        flex-direction: row;
+        gap: 5vw;
+    }
+
+    .no2{
+        width: 30vw;
+        height: auto;
+    }
+    
+}
+
+@media (max-width: 500px){
+    .boxy1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .boxy2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .boxy3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box{
+        width: 75vw;
+    }
+
+    .yoda{
+        flex-direction: column;
+    }
+
+    .groot{
+        flex-direction: column;
+    }
+
+    .filament{
+        flex-direction: column-reverse;
+        height: fit-content;
+        width: 75vw;
+        padding-top: 6vw;
+        padding-bottom: 6vw;
+    }
+
+    .filament-text{
+        text-align: center;
+    }
+
+    .resin{
+        flex-direction: column;
+        height: fit-content;
+        width: 75vw;
+        padding-top: 6vw;
+        padding-bottom: 6vw;
     }
 }

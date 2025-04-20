@@ -2,6 +2,7 @@ body{
     font-family: "Jetbrains Mono", serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     background-color: #212121;
 }
 
@@ -17,11 +18,10 @@ a:hover{
 
 .hero{
     background-image: url("images/main.jpg");
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    height: auto; 
-    max-height: 45vw; 
-    object-fit: cover; 
-    display: block;
+    height: 45vw;
 }
 
 .neoprint-title{
@@ -58,6 +58,9 @@ button{
     outline: 0.15vw solid white;
     outline-offset: 0.2vw;
     transition: background-color 0.3s, color 0.3s, outline-color 0.3s;
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
 }
 
 .button-primary:hover{
@@ -92,7 +95,7 @@ button{
     transition: background-color 0.3s, color 0.3s, outline-color 0.3s; 
 }
 
-.buttons{
+.hero-buttons{
     display: flex;
     gap: 1.5vw;
 }
@@ -115,6 +118,7 @@ button{
 
 h1{
     font-size: 2vw;
+    font-weight: bold;
 }
 
 h2{
@@ -129,9 +133,10 @@ p{
     font-size: 0.95vw;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 501px) and (max-width: 700px) {
     h1{
         font-size: 2.8vw;
+        font-weight: bold;
     }
     
     h2{
@@ -146,19 +151,112 @@ p{
         font-size: 1.8vw;
     }
 
-    .button1{
+    .button-primary{
         font-size: 1.9vw;
     }
 
-    .button2{
+    .button-secondary{
         font-size: 1.9vw;
     }
 
-    .button3{
+    .button-other{
         font-size: 1.9vw;
     }
 
     .hero{
+        background-image: url("images/main-mobil.png");
+        height: 80vw;
+    }
 
+    .hero-text{
+        top: 20vw;
+        margin-left: 9.4vw;
+        width: 60%;
+    }
+
+    .hero-text h1{
+        font-size: 3.4vw;
+    }
+
+    .hero-text p{
+        font-size: 2.2vw;
+    }
+
+    .button-primary{
+        height: 3.4vw;
+        border-radius: 1.7vw;
+        padding-left: 0.8vw;
+        padding-right: 0.8vw;
+    }
+
+    .button-secondary{
+        height: 3.4vw;
+        border-radius: 1.7vw;
+    }
+}
+
+@media (max-width: 500px){
+    h1{
+        font-size: 7vw;
+        font-weight: bold;
+    }
+    
+    h2{
+        font-size: 5vw;
+    }
+    
+    h3{
+        font-size: 4.8vw;
+    }
+    
+    p{
+        font-size: 4vw;
+    }
+
+    .hero{
+        background-image: url("images/main-mobil.png");
+        height: 130vw;
+    }
+
+    .hero-text{
+        top: 70vw;
+        margin-left: 6.4vw;
+        width: 80%;
+    }
+
+    .button-primary{
+        height: 8vw;
+        border-radius: 4vw;
+        padding-left: 1.2vw;
+        padding-right: 1.2vw;
+        font-size: 4vw;
+        outline-offset: 0.7vw;
+        outline-width: 0.5vw;
+    }
+
+    .button-primary:hover{
+        outline-offset: 1.4vw;
+    }
+
+    .button-secondary{
+        height: 8vw;
+        border-radius: 4vw;
+        padding-left: 1.2vw;
+        padding-right: 1.2vw;
+        font-size: 4vw;
+        outline-offset: 0.7vw;
+        outline-width: 0.5vw;
+    }
+
+    .button-secondary:hover{
+        outline-offset: 1.4vw;
+    }
+
+    .button-other{
+        font-size: 4vw;
+    }
+
+    .hero-buttons{
+        gap: 4vw;
     }
 }
