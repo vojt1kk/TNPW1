@@ -42,10 +42,25 @@ li:hover{
     background-color: white;
     width: 2vw;
     aspect-ratio: 1/1;
-    border-radius: 2vw;
+    border-radius: 100%;
     padding: 0.6vw;
 }
 
 .copyright{
     font-size: 0.7vw;
+}
+
+
+@media (min-width: 501px) and (max-width: 700px){
+    li{
+        font-size: 1.8vw;
+    }
+
+    .copyright{
+        font-size: 1.4vw;
+    }
+
+    .icon{
+        width: 4vw;
+    }
 }
