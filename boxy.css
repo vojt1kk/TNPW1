@@ -50,6 +50,7 @@
     border-radius: 2vw;
     gap: 4vw;
     margin-bottom: 2vw;
+    padding: 2vw;
 }
 
 .filament-text{
@@ -107,6 +108,7 @@
     border-radius: 2vw;
     gap: 4vw;
     margin-bottom: 2vw;
+    padding: 2vw;
 }
 
 .resin-text{
@@ -186,6 +188,8 @@
         width: 81.2vw;
         padding-top: 3vw;
         padding-bottom: 3vw;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .filament-text{
@@ -211,6 +215,8 @@
         width: 81.2vw;
         padding-top: 3vw;
         padding-bottom: 3vw;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .resin-text{
@@ -276,6 +282,10 @@
     }
 
     .filament-text{
+        text-align: center;
+    }
+
+    .resin-text{
         text-align: center;
     }
 
