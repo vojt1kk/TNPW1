@@ -31,27 +31,6 @@
     border-color: white;
 }
 
-.fa-arrow-right {
-    font-size: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3vw;
-    aspect-ratio: 1/1;
-    border-radius: 100%;
-    background-color: transparent;
-    color: white;
-    border-color: transparent;
-    outline: white;
-    transition: 0.3s;
-}
-
-.fa-arrow-right:hover {
-    background-color: white;
-    color: black;
-    border-color: white;
-}
-
 body{
     font-family: "Jetbrains Mono", serif;
     margin: 0;
@@ -179,6 +158,7 @@ p{
     width: 18vw;
     aspect-ratio: 1/1;
     padding: 2vw;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -203,6 +183,31 @@ p{
     padding: 0;
     gap: 1.5vw;
     margin-bottom: 5vh;
+}
+
+.fa-arrow-right {
+    position: absolute;
+    bottom: 1vw;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background-color: transparent;
+    color: white;
+    border-color: transparent;
+    outline: white;
+    transition: 0.3s;
+}
+
+.fa-arrow-right:hover {
+    position: absolute;
+    bottom: 1vw;
+    background-color: white;
+    color: black;
+    border-color: white;
 }
 
 .ac-nadpis{
