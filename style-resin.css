@@ -1,13 +1,37 @@
-.hero{
-    background-image: url("images/resin.jpg");
-    width: 100%;
-    height: auto; 
-    max-height: 40vw; 
-    object-fit: cover; /*aby se pozadi nenatahovalo*/
-    display: block; /*odstrani mezery pod pozadim*/
-    margin-bottom: -10vw;
+/* Reset and Base */
+body {
+    font-family: "Jetbrains Mono", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #212121;
+    color: white;
+    overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00d9ff;
+}
+
+button {
+    font-family: "Jetbrains Mono", serif;
+}
+
+/* Hero Image */
+.hero {
+    background-image: url("images/resin.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 45vw;
+}
+
+/* Back Arrow */
 .fa-arrow-left {
     position: absolute;
     top: 2vw;
@@ -31,150 +55,61 @@
     border-color: white;
 }
 
-body{
-    font-family: "Jetbrains Mono", serif;
-    margin: 0;
-    padding: 0;
-    background-color: #212121;
-    color: white;
-}
-
-.gap-pozadi{
-    width: 100%;
-    background-color: blue;
-    height: 70vh;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-}
-
-a:hover{
-    color: #00d9ff;
-    transition: 0.3s;
-}
-
-button{
-    font-family: "Jetbrains Mono", serif;
-}
-
-.button-primary{
+/* Buttons */
+.button-primary {
     background-color: rgb(255, 81, 0);
     font-size: 0.9vw;
     color: white;
     width: fit-content;
-    padding-left: 0.6vw;
-    padding-right: 0.6vw;
+    padding: 0 0.6vw;
     height: 2.4vw;
     cursor: pointer;
     border-radius: 1.2vw;
-    border-style: none;
+    border: none;
     outline: 0.15vw solid white;
     outline-offset: 0.2vw;
-    transition: background-color 0.3s, color 0.3s, outline-color 0.3s;
     display: inline-flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
+    transition: background-color 0.3s, color 0.3s, outline-color 0.3s;
 }
 
-.button-primary:hover{
+.button-primary:hover {
     background-color: white;
     color: rgb(255, 81, 0);
     outline: 0.15vw solid rgb(255, 81, 0);
     outline-offset: 0.4vw;
-    transition: background-color 0.3s, color 0.3s, outline-color 0.3s; 
 }
 
-.button-secondary{
-    background-color: rgba(255, 255, 255, 0.2);
-    font-size: 0.9vw;
-    color: white;
-    width: fit-content;
-    height: 2.4vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    cursor: pointer;
-    border-radius: 1.2vw;
-    border-style: none;
-    outline: 0.15vw solid white;
-    outline-offset: 0.2vw;
-    transition: background-color 0.3s, color 0.3s, outline-color 0.3s;
-}
-
-.button-secondary:hover{
-    background-color: rgba(255, 255, 255, 0.8);
-    color: rgb(255, 81, 0);
-    outline: 0.15vw solid white;
-    outline-offset: 0.4vw;
-    transition: background-color 0.3s, color 0.3s, outline-color 0.3s; 
-}
-
-.hero-buttons{
-    display: flex;
-    gap: 1.5vw;
-}
-
-.button-other{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    width: fit-content;
-    color: white;
-    font-size: 0.9vw;
-    font-family: "JetBrains Mono", serif;
-    transition: color 0.3s;
-}
-
-.button-other:hover{
-    color: rgb(0, 217, 255);
-    transition: 0.3s;
-}
-
-h1{
+/* Typography */
+h1 {
     font-size: 2vw;
+    font-weight: bold;
 }
 
-h2{
+h2 {
     font-size: 1.4vw;
 }
 
-h3{
+h3 {
     font-size: 1.2vw;
 }
 
-p{
+p {
     font-size: 0.95vw;
 }
 
-/*text+boxy*/
-.nadpis{
+/* Boxy Section */
+.nadpis, .ac-nadpis, .bd-nadpis {
     margin-left: 5vw;
-}
-
-.box{
-    background-color: #19191c;
     color: white;
-    width: 18vw;
-    aspect-ratio: 1/1;
-    padding: 2vw;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 2vw;
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
 }
 
-.box h3{
-    color: #00d9ff;
+.nadpis{
+    margin-top: -10vw;
 }
 
-.boxy1{
+.boxy1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -185,37 +120,51 @@ p{
     margin-bottom: 5vh;
 }
 
+.box {
+    background-color: #19191c;
+    color: white;
+    width: 18vw;
+    aspect-ratio: 1/1;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 7%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    position: relative;
+}
+
+.box h3 {
+    color: #00d9ff;
+}
+
+/* Arrows in boxes */
 .fa-arrow-right {
     position: absolute;
     bottom: 1vw;
     font-size: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 3vw;
     aspect-ratio: 1/1;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: transparent;
     color: white;
-    border-color: transparent;
-    outline: white;
     transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fa-arrow-right:hover {
-    position: absolute;
-    bottom: 1vw;
     background-color: white;
     color: black;
-    border-color: white;
 }
 
-.ac-nadpis{
-    margin-left: 5vw;
-    color: white;
-}
-
-.ac{
+/* Sections */
+.ac, .bd {
     margin: auto;
     background-color: #19191c;
     color: white;
@@ -229,19 +178,26 @@ p{
     margin-bottom: 2vw;
 }
 
-.ac-text{
+.ac-text, .bd-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     width: 55vw;
     text-align: justify;
 }
 
-.ac-text h2{
+.ac-text {
+    align-items: flex-end;
+}
+
+.bd-text {
+    align-items: flex-start;
+}
+
+.ac-text h2, .bd-text h2 {
     color: rgb(0, 217, 255);
 }
 
-.ac-img{
+.ac-img, .bd-img {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -249,55 +205,15 @@ p{
     gap: 2vw;
 }
 
-.resin-obrazek{
+.resin-obrazek {
     width: 18vw;
 }
 
-
-.bd-nadpis{
-    margin-left: 5vw;
-    color: white;
-}
-
-.bd{
-    margin: auto;
-    background-color: #19191c;
-    color: white;
-    width: 90vw;
-    height: 35vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2vw;
-    gap: 4vw;
-    margin-bottom: 2vw;
-}
-
-.bd-text{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 55vw;
-    text-align: justify;
-}
-
-.bd-text h2{
-    color: rgb(0, 217, 255);
-}
-
-.bd-img{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 2vw;
-}
-
-footer{
+/* Footer */
+footer {
     width: 100vw;
     color: white;
     background-color: #19191c;
-    height: fit-content;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -307,33 +223,31 @@ footer{
     gap: 2vw;
 }
 
-ul{
+ul {
     margin: 0;
     padding: 0;
-    width: fit-content;
-    list-style-type: none;
+    list-style: none;
     display: flex;
     justify-content: center;
     gap: 2vw;
 }
 
-li{
+li {
     font-size: 1vw;
-    width: fit-content;
+    cursor: pointer;
 }
 
-li:hover{
-    cursor: pointer;
+li:hover {
     text-decoration: underline;
 }
 
-.ficons{
+.ficons {
     display: flex;
     justify-content: center;
     gap: 2vw;
-    width: 100vw;
 }
-.icon{
+
+.icon {
     background-color: white;
     width: 2vw;
     aspect-ratio: 1/1;
@@ -341,178 +255,132 @@ li:hover{
     padding: 0.6vw;
 }
 
-.copyright{
+.copyright {
     font-size: 0.7vw;
 }
 
+/* Responsive */
+@media (min-width: 401px) and (max-width: 800px) {
+    h1 { font-size: 2.8vw; }
+    h2 { font-size: 2.2vw; }
+    h3 { font-size: 2vw; }
+    p { font-size: 1.8vw; }
 
-@media (min-width: 501px) and (max-width: 700px) {
-    h1{
-        font-size: 2.8vw;
-        font-weight: bold;
-    }
-    
-    h2{
-        font-size: 2.2vw;
-    }
-    
-    h3{
-        font-size: 2vw;
-    }
-    
-    p{
-        font-size: 1.8vw;
-    }
-
-    .button-primary{
+    .button-primary, .button-secondary, .button-other {
         font-size: 1.9vw;
     }
 
-    .button-secondary{
-        font-size: 1.9vw;
+    .hero{
+        background-image: url("images/resin-mobil.png");
+        height: 100vw;
     }
 
-    .button-other{
-        font-size: 1.9vw;
-    }
-
-    .hero-text{
-        top: 20vw;
-        margin-left: 9.4vw;
-        width: 60%;
-    }
-
-    .hero-text h1{
-        font-size: 3.4vw;
-    }
-
-    .hero-text p{
-        font-size: 2.2vw;
-    }
-
-    .button-primary{
-        height: 3.4vw;
-        border-radius: 1.7vw;
-        padding-left: 0.8vw;
-        padding-right: 0.8vw;
-    }
-
-    .button-secondary{
-        height: 3.4vw;
-        border-radius: 1.7vw;
-    }
-
-    .boxy1{
+    .boxy1 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: fit-content;
         gap: 2vw;
     }
 
-    .boxy2{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: fit-content;
-        gap: 2vw;
-    }
-
-    .boxy3{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: fit-content;
-        gap: 2vw;
-    }
-
-    .box{
+    .box {
         width: 32.4vw;
         border-radius: 3.6vw;
-        padding-left: 3.6vw;
-        padding-right: 3.6vw;
-        padding-top: 3.6vw;
-        padding-bottom: 3.6vw;
+        padding: 3.6vw;
     }
 
-    .ac-nadpis{
-        margin-left: 9.4vw;
+    .ac, .bd {
+        flex-direction: column;
+        width: 81.2vw;
+        padding: 3vw 0;
+        height: fit-content;
+    }
+
+    .ac-img, .bd-img {
+        flex-direction: row;
+        gap: 1vw;
+    }
+
+    .resin-obrazek {
+        width: 30vw;
+    }
+
+    li { font-size: 1.8vw; }
+    .icon { width: 4vw; }
+    .copyright { font-size: 1.4vw; }
+}
+
+@media (max-width: 400px) {
+    h1 { font-size: 7vw; }
+    h2 { font-size: 5vw; }
+    h3 { font-size: 4.8vw; }
+    p { font-size: 4vw; }
+
+    .button-primary, .button-secondary, .button-other {
+        font-size: 4vw;
+    }
+
+    .hero{
+        background-image: url("images/resin-mobil.png");
+        height: 130vw;
+    }
+
+    .nadpis{
+        margin-top: -30vw;
+        margin-left: 10vw;
+    }
+
+    .boxy1 {
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    .box {
+        width: 75vw;
+        border-radius: 5vw;
+    }
+
+    .ac-nadpis, .bd-nadpis{
+        margin-left: 10vw;
     }
 
     .ac{
         flex-direction: column-reverse;
+        width: 75vw;
+        padding-top: 6vw;
+        padding-bottom: 6vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        border-radius: 5vw;
         height: fit-content;
-        width: 81.2vw;
-        padding-top: 3vw;
-        padding-bottom: 3vw;
     }
-
-    .ac-text{
-        width: 65vw;
-    }
-
-    .ac-img{
-        flex-direction: row;
-        gap: 1vw;
-    }
-
-    .resin-obrazek{
-        width: 30vw;
-    }
-
-    .bd-nadpis{
-        margin-left: 9.4vw;
-    }
-
-    .bd{
+    
+    .bd {
         flex-direction: column;
+        width: 75vw;
+        padding-top: 6vw;
+        padding-bottom: 6vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        border-radius: 5vw;
         height: fit-content;
-        width: 81.2vw;
-        padding-top: 3vw;
-        padding-bottom: 3vw;
     }
 
-    .bd-text{
-        width: 65vw;
+    .ac-text, .bd-text{
+        text-align: center;
     }
 
-    .bd-img{
-        flex-direction: row;
-        gap: 1vw;
+    .resin-obrazek {
+        width: 40vw;
     }
 
-    li{
-        font-size: 1.8vw;
+    li {
+        font-size: 3.5vw; 
     }
-
-    .copyright{
-        font-size: 1.4vw;
+    .icon {
+        width: 8vw; 
     }
-
-    .icon{
-        width: 4vw;
-    }
-}
-
-@media (max-width: 500px){
-    h1{
-        font-size: 7vw;
-        font-weight: bold;
-    }
-    
-    h2{
-        font-size: 5vw;
-    }
-    
-    h3{
-        font-size: 4.8vw;
-    }
-    
-    p{
-        font-size: 4vw;
-    }
-
-    .hero-text{
-        top: 70vw;
-        margin-left: 6.4vw;
-        width: 80%;
+    .copyright { 
+        font-size: 2.4vw; 
     }
 
     .button-primary{
@@ -547,9 +415,20 @@ li:hover{
         font-size: 4vw;
     }
 
-    .hero-buttons{
-        gap: 4vw;
+    .fa-arrow-left{
+        font-size: 10vw;
+        top: 8vw;
+        left: 5vw;
+        width: 10vw;
+        height: 10vw;
+    }
+    .fa-arrow-left:hover{
+        font-size: 10vw;
     }
 
-    
+    .fa-arrow-right{
+        font-size: 7vw;
+        width: 8vw;
+        height: 8vw;
+    }
 }
