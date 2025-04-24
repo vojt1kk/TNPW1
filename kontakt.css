@@ -35,6 +35,7 @@ input{
     font-family: inherit;
     box-sizing: border-box;
     background-color: #212121;
+    color: white;
 }
 
 textarea {

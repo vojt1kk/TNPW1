@@ -9,7 +9,7 @@
 @media (min-width: 401px) and (max-width: 800px){
     .hero{
         background-image: url("images/main-mobil.png");
-        height: 130vw;
+        height: 100vw;
     }
 
     .hero-text{
