@@ -1,54 +1,64 @@
-form {
-    background-color: #fff;
+body{
+    color: white;
+}
+
+.formular {
+    background-color: #19191c;
     padding: 2rem;
     border-radius: 1rem;
-    max-width: 600px;
-    margin: 2rem auto;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  form h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  form label {
+    width: 50vw;
+    margin: auto;
+}
+
+.form-nadpis {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #444;
-  }
-  
-  form input[type="text"],
-  form input[type="email"],
-  form input[type="tel"],
-  form select,
-  form textarea,
-  form input[type="file"] {
+}
+
+select,
+textarea,
+input{
     width: 100%;
-    padding: 0.6rem;
-    border: 1px solid #ccc;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 0.1vw solid #ccc;
     border-radius: 0.75rem;
-    margin-bottom: 1rem;
     font-size: 1rem;
-  }
-  
-  form textarea {
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: #212121;
+}
+
+textarea {
     resize: vertical;
-  }
-  
-  form button {
-    background-color: #2563eb;
+}
+
+button {
+    background-color: #ff5100;
     color: white;
     padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
     border: none;
     border-radius: 0.75rem;
-    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  form button:hover {
-    background-color: #1d4ed8;
-  }
+}
+
+button:hover {
+    background-color: white;
+    color: #ff5100;
+    transition: background-color 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}

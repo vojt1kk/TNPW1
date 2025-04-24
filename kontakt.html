@@ -9,49 +9,91 @@
     </style>
     <link rel="stylesheet" href="kontakt.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="efekty.js"></script>
 </head>
 <body>
-    <form action="/odeslat-poptavku" method="POST" class="space-y-4 max-w-xl mx-auto p-6 bg-white rounded-2xl shadow-md">
+    <form action="#" method="post" class="formular">
         <h1 class="form-nadpis">Poptávka 3D Tisku</h1>
       
         <div>
-          <label for="jmeno" class="block text-sm font-medium text-gray-700">Jméno a příjmení</label>
-          <input type="text" id="jmeno" name="jmeno" required class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm p-2" />
+          <label for="jmeno" class="jmeno">Jméno</label>
+          <input type="text" id="jmeno" name="jmeno"/>
+        </div>
+
+        <div>
+            <label for="prijmeni" class="prijmeni">Příjmení</label>
+            <input type="text" id="prijmeni" name="prijmeni"/>
+          </div>
+      
+        <div>
+          <label for="email" class="email">E-mail</label>
+          <input type="email" id="email" required="@"/>
         </div>
       
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
-          <input type="email" id="email" name="email" required class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm p-2" />
+          <label for="telefon" class="telefon">Telefon</label>
+          <input type="tel" id="telefon" name="telefon"/>
         </div>
       
         <div>
-          <label for="telefon" class="block text-sm font-medium text-gray-700">Telefon</label>
-          <input type="tel" id="telefon" name="telefon" class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm p-2" />
+            <label for="typ-tisku">Typ tisku</label>
+            <select id="typ-tisku">
+              <option value="filament">Filamentový tisk</option>
+              <option value="resin">Resinový tisk</option>
+            </select>
+          </div>
+          
+          <div id="materialy-filament" class="mt-4">
+            <label for="material-filament">Materiál Filament</label>
+            <select id="material-fdm" name="material_filament">
+              <option value="PLA">PLA – Ekologický, snadno tisknutelný (250 Kč)</option>
+              <option value="PETG">PETG – Odolný, pružný, teplotně stabilní (300 Kč)</option>
+              <option value="TPU">TPU – Flexibilní, nárazuvzdorný (375 Kč)</option>
+              <option value="ABS">ABS – Tvrdý, mechanicky i teplotně odolný (350 Kč)</option>
+            </select>
+          </div>
+          
+          <div id="materialy-resin" class="mt-4 hidden">
+            <label for="material-resin">Typ resin</label>
+            <select id="material-resin" name="material_resin">
+              <option value="Standard">Standardní resin – Hladký povrch, vysoké rozlišení (400 Kč)</option>
+              <option value="Odolny">Odolný resin – Houževnatý, pro funkční díly (425 Kč)</option>
+              <option value="Flexibilni">Flexibilní resin – Elastický, pro těsnění, kryty (450 Kč)</option>
+              <option value="Teplotni">Teplotně odolný resin – Stálost při vysokých teplotách (475 Kč)</option>
+            </select>
+          </div>
+      
+        <div>
+          <label for="popis">Popis součástky / specifikace</label>
+          <textarea id="popis" name="popis" rows="4"></textarea>
         </div>
       
         <div>
-          <label for="material" class="block text-sm font-medium text-gray-700">Požadovaný materiál</label>
-          <select id="material" name="material" class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm p-2">
-            <option value="PLA">PLA</option>
-            <option value="PETG">PETG</option>
-            <option value="ABS">ABS</option>
-            <option value="Resin">Resin</option>
-          </select>
+          <label for="soubor">Přiložit 3D model (.STL, .OBJ)</label>
+          <input type="file" id="soubor" name="soubor" accept=".stl,.obj"/>
         </div>
       
         <div>
-          <label for="popis" class="block text-sm font-medium text-gray-700">Popis součástky / specifikace</label>
-          <textarea id="popis" name="popis" rows="4" class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm p-2"></textarea>
-        </div>
-      
-        <div>
-          <label for="soubor" class="block text-sm font-medium text-gray-700">Přiložit 3D model (.STL, .OBJ)</label>
-          <input type="file" id="soubor" name="soubor" accept=".stl,.obj" class="mt-1 block w-full text-sm text-gray-700" />
-        </div>
-      
-        <div>
-          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-xl shadow hover:bg-blue-700">Odeslat poptávku</button>
+          <button type="submit">Odeslat poptávku</button>
         </div>
       </form>
+
+      <footer>
+        <div class="ficons">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAm5JREFUaEPtWTlOBDEQrH0DDyEmAmJ+gAh4ABkJEYcIyEh4AxK/ADISvsF+gBxoZEsty+2u9s7MMmJGWmkPH13V5T68K8z8Wc3cfiwAtu3BxQNz9cABAHntJwDyvve5SRNfftaUV+iJSugawFVoh/hgAST7UA8LQBgWwzdhmjJIDaKAMABqrGdXv/a4XRmZCREp1sg59NZnAHwV1FHMROlO40uyhCgBYT4egHJBl5FOw/U08cQzKyUPgGZ/DOZ3AJwCOALwDkD2+EyHWAcLk7gWAM2E68pO5s8APKi59wDO02dNXhcALZ9e9vPBtOL7HYALBeANwF76LDLK8839Wx7oBSDzrKhSGnIM4FEBuARwWwFgKqAFgHKh2jyS5DSQEwC7AD4APAFYpzUpCQ8FIGJ8xuzJsoxGVVuHAGAlOjEwaz/XTmUZ0gIxGYAy0bVyRQ2sReIkAEqDPFmIfNhENSgAi6XeRKdDpBVhJgcQKTMY45gxzaZes1vzALVBI0N7YZpan41C/wLA7CQk6mAOY01FZfTq9jArIYvdnn6BDb2DnoGWPCIdW2mUeGeriUwMqGXXXEboUqJ2KfAnSgkLhNfjeFl7YwnpA8pEmEhF6hlfIyVcjVIdUYVmC4jISa5h2EsrvU5XQ0Mt4OjEaylb0ykCt93UtwBQhSILQDZidOsdXPZ3JtH9ruXdC/UkKtZIaxzbL1AAynJhbE9EOjYaQC17ZiCZxfC9vqK/9T+DK1tPQnmfSIzfVEJ5PpN73DNQGjMFkNA1JuuBGhD5zrqBi3ghy0//1UTP7wVAbzD2wAXA2Ax76y8e8Bga+/fZe+Abntu2MfzR5rcAAAAASUVORK5CYII=" alt="instagram" class="icon"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAQlJREFUaEPtl2EOwiAMhbuTOU+mnsx5MrXJSPhRCG3BFff4tRji+t77KN1Ck69l8voJAo5OEAmcJYE7EV12sWsmetufH0SUnlWejEaIC781VHSNKOD5LSp3u6YjnIBW55OocALeDdjkW0IJYGwYH80KJaCGT+o2po4jOTKiC9UOr9npUpy/FMCus4CuCwIEO0sIIYGjD3G4BLjfS3NObXwotU/z4fYcYsuF1b0bRhDgQgsCOtxK0yfA8xHPT6blQYhfKL249AXGTr+EKvl383DnFSC5hptYwxISwDCn4UXYC4SAEBByOgCEnAaiCwEhIOR04B8R6m9J5R9HdCEI0DiABDRujdg7fQIffyhLMbkCEtYAAAAASUVORK5CYII=" alt="facebook" class="icon"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAehJREFUaEPtWAlOBDEM674MeBnwMuBlIMN4FY06bdyEVit1pNUe0xyO3WS2t/Lg1+3B8y8bwGoGNwObgWAFtoQGCvhcSnk97PD5/fj8WUrBS7paDMC57LARnYnj/eoCmDdzE2u53v5+X9ICQIOqoVSmv6RY9Z6pLRqTPwNzAfg+Vl0a9zI57ivJ11w2418xAOQfxlsEBPy0ZNOqA9hAbLD3dZLXr50XAIOoQKLVt+CquaoA4FABkQGALFQbyggAhY2IfBAHSb+0NNbqQt7g7OO1buX1cZUjkm+28t4csBvZ03QIhtXD5hvdwPARAgAHGRr2AE9ngBMQ9NnRH0lmxLb7rBbZxCMJqTbDABCIk1gNmrW+24Fagwz3oh0kCsQ1b7K7UDRpa9/tQD0GVnehrv49AFaBcMnHC4Ag8O59po9KyVX9EQBPwcnqAeauvgJgZkt1V18BMOuRQqq+AmDGZnYNrrMGJbr++eHO1fejAGgPSWVuaFk6TERlwBbAc86T3nUyGciYCUOysSAUBrIqjvjNP+oe2noSosa5LvK38JzPsN5rwHpHixkyYdy0qqsSigwxJk3ZKOpwrVX3AKWEFoqL3+3RB44A+T3zdLsKSAHgqsjsRRvA7IpnDbLVed/jbwmtpmIzsJqBH2ISVjEWJgWZAAAAAElFTkSuQmCC" alt="twitter" class="icon"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAWFJREFUaEPtmFkOwjAMRNuTAScDTgacDDoSQWnrNIvtLML9QSJp6jdjZ5unwZ958PgnA2jtoDlgDjAVsBRiCsh+/S8cOH9lwu8pIJnrk6vok3jh5f2HdqrPr8uRAwjqugxQGlwuTKj/fWm4hRqPAN5SEQiNc6HcCAGAGOr39CCVALF6KACkzKOnyL1Ydi5QAD2q7xiGB9gVNOUA0qf1zBPK4F0daABAJa0JoAqAE0WjlpIAuPP/1lVpkNX4VApJAyCfUVNuZefO0E0AXNASbjQFkAAxgFgOa+9wmzgguTWvDiBRuL7rUQDuVqL5QsYFwI5R6ySXtBJzAWJFzmkfHiBpO93ziWx4gKQTGXK0xzogr1dCq2aPaUTGGrtalF6ESmYgzDxQn7yhiwH4e3n38e31Ivf8HLpedP8XXy2WqFX9nRQHqgeV80EDyFFLo685oKFqzpjmQI5aGn3NAQ1Vc8b8ALZvQDGD0BclAAAAAElFTkSuQmCC" alt="youtube" class="icon"/>
+        </div>
+        <ul>
+            <li>O nás</li>
+            <li>Naše pobočky</li>
+            <li>Tisk</li>
+            <li>Kontakt</li>
+        </ul>
+        <p class="copyright">&copy; 2025 Vojtěch Kocourek. Všechna práva vyhrazena.</p>
+        <p class="muj-email">kocouvo2@uhk.cz</p>
+    </footer>
 </body>
 </html>
