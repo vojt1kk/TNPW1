@@ -16,7 +16,7 @@
     <a href="index.html">    
         <i class="fa-solid fa-arrow-left"></i>
     </a>    
-    <img src="images/filament.png" alt="pozadi" class="hero">
+    <div class="hero"></div>
     <h1 class="nadpis">Filamentový Tisk: </h1>
     <div class="boxy1">
         <div class="box">
@@ -26,6 +26,7 @@
             <p>
                 Snadno tisknutelný a ekologický materiál vyráběný z obnovitelných zdrojů. Nabízí pevnost, hladký povrch a širokou škálu barev, což ho činí ideální volbou pro detailní a estetické výtisky.
             </p>
+            <i class="fa-solid fa-arrow-right" onclick="document.getElementById('PLAFilament').scrollIntoView({behavior: 'smooth'})"></i>
         </div>
         <div class="box">
             <h3>
@@ -34,6 +35,7 @@
             <p>
                 Odolný a pružný filament s vysokou pevností a teplotní stabilitou. Skvěle kombinuje snadnou tisknutelnost s mechanickou odolností, což ho činí ideálním pro funkční prototypy a namáhané díly.
             </p>
+            <i class="fa-solid fa-arrow-right" onclick="document.getElementById('PETGFilament').scrollIntoView({behavior: 'smooth'})"></i>
         </div>
         <div class="box">
             <h3>
@@ -42,6 +44,7 @@
             <p>
                 Flexibilní a odolný filament s vysokou pružností a houževnatostí. Skvěle absorbuje nárazy, odolává opotřebení a chemikáliím, což ho činí ideálním pro tisk pružných dílů, těsnění nebo ochranných krytů.
             </p>
+            <i class="fa-solid fa-arrow-right" onclick="document.getElementById('TPUFilament').scrollIntoView({behavior: 'smooth'})"></i>
         </div>
         <div class="box">
             <h3>
@@ -50,15 +53,16 @@
             <p>
                 Pevný a odolný materiál s vysokou teplotní a mechanickou odolností. Je vhodný pro funkční prototypy a technické díly, které musí vydržet náročné podmínky. Lze jej povrchově upravovat acetonem pro hladký vzhled.
             </p>
+            <i class="fa-solid fa-arrow-right" onclick="document.getElementById('ABSFilament').scrollIntoView({behavior: 'smooth'})"></i>
         </div>
     </div>
 
-    <h1 class="ac-nadpis">PLA filament:</h1>
+    <h1 class="ac-nadpis" id="PLAFilament">PLA filament:</h1>
     <div class="ac">
         <div class="ac-img">
             <img src="images/PLA.png" alt="ukazka" class="filament-obrazek">
             <a href="https://www.jetbrains.com">
-                <button class="button1">
+                <button class="button-primary">
                     Objednat
                 </button>
             </a>
@@ -74,7 +78,7 @@
         </div>
     </div>
 
-    <h1 class="bd-nadpis">PETG filament:</h1>
+    <h1 class="bd-nadpis" id="PETGFilament">PETG filament:</h1>
     <div class="bd">
         <div class="bd-text">
             <h2>Resinový 3D tisk – Vysoké rozlišení a jemné detaily</h2>
@@ -88,19 +92,19 @@
         <div class="bd-img">
             <img src="images/PETG.png" alt="ukazka" class="filament-obrazek">
             <a href="https://www.jetbrains.com">
-                <button class="button1">
+                <button class="button-primary">
                     Objednat
                 </button>
             </a>
         </div>
     </div>
     
-    <h1 class="ac-nadpis">TPU filament:</h1>
+    <h1 class="ac-nadpis" id="TPUFilament">TPU filament:</h1>
     <div class="ac">
         <div class="ac-img">
             <img src="images/TPU.png" alt="ukazka" class="filament-obrazek">
             <a href="https://www.jetbrains.com">
-                <button class="button1">
+                <button class="button-primary">
                     Objednat
                 </button>
             </a>
@@ -116,7 +120,7 @@
         </div>
     </div>
 
-    <h1 class="bd-nadpis">ABS filament:</h1>
+    <h1 class="bd-nadpis" id="ABSFilament">ABS filament:</h1>
     <div class="bd">
         <div class="bd-text">
             <h2>Resinový 3D tisk – Vysoké rozlišení a jemné detaily</h2>
@@ -130,11 +134,29 @@
         <div class="bd-img">
             <img src="images/ABS.png" alt="ukazka" class="filament-obrazek">
             <a href="https://www.jetbrains.com">
-                <button class="button1">
+                <button class="button-primary">
                     Objednat
                 </button>
             </a>
         </div>
     </div>
+
+    <!--footer-->
+    <footer>
+        <div class="ficons">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAm5JREFUaEPtWTlOBDEQrH0DDyEmAmJ+gAh4ABkJEYcIyEh4AxK/ADISvsF+gBxoZEsty+2u9s7MMmJGWmkPH13V5T68K8z8Wc3cfiwAtu3BxQNz9cABAHntJwDyvve5SRNfftaUV+iJSugawFVoh/hgAST7UA8LQBgWwzdhmjJIDaKAMABqrGdXv/a4XRmZCREp1sg59NZnAHwV1FHMROlO40uyhCgBYT4egHJBl5FOw/U08cQzKyUPgGZ/DOZ3AJwCOALwDkD2+EyHWAcLk7gWAM2E68pO5s8APKi59wDO02dNXhcALZ9e9vPBtOL7HYALBeANwF76LDLK8839Wx7oBSDzrKhSGnIM4FEBuARwWwFgKqAFgHKh2jyS5DSQEwC7AD4APAFYpzUpCQ8FIGJ8xuzJsoxGVVuHAGAlOjEwaz/XTmUZ0gIxGYAy0bVyRQ2sReIkAEqDPFmIfNhENSgAi6XeRKdDpBVhJgcQKTMY45gxzaZes1vzALVBI0N7YZpan41C/wLA7CQk6mAOY01FZfTq9jArIYvdnn6BDb2DnoGWPCIdW2mUeGeriUwMqGXXXEboUqJ2KfAnSgkLhNfjeFl7YwnpA8pEmEhF6hlfIyVcjVIdUYVmC4jISa5h2EsrvU5XQ0Mt4OjEaylb0ykCt93UtwBQhSILQDZidOsdXPZ3JtH9ruXdC/UkKtZIaxzbL1AAynJhbE9EOjYaQC17ZiCZxfC9vqK/9T+DK1tPQnmfSIzfVEJ5PpN73DNQGjMFkNA1JuuBGhD5zrqBi3ghy0//1UTP7wVAbzD2wAXA2Ax76y8e8Bga+/fZe+Abntu2MfzR5rcAAAAASUVORK5CYII=" alt="instagram" class="icon"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAQlJREFUaEPtl2EOwiAMhbuTOU+mnsx5MrXJSPhRCG3BFff4tRji+t77KN1Ck69l8voJAo5OEAmcJYE7EV12sWsmetufH0SUnlWejEaIC781VHSNKOD5LSp3u6YjnIBW55OocALeDdjkW0IJYGwYH80KJaCGT+o2po4jOTKiC9UOr9npUpy/FMCus4CuCwIEO0sIIYGjD3G4BLjfS3NObXwotU/z4fYcYsuF1b0bRhDgQgsCOtxK0yfA8xHPT6blQYhfKL249AXGTr+EKvl383DnFSC5hptYwxISwDCn4UXYC4SAEBByOgCEnAaiCwEhIOR04B8R6m9J5R9HdCEI0DiABDRujdg7fQIffyhLMbkCEtYAAAAASUVORK5CYII=" alt="facebook" class="icon"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAehJREFUaEPtWAlOBDEM674MeBnwMuBlIMN4FY06bdyEVit1pNUe0xyO3WS2t/Lg1+3B8y8bwGoGNwObgWAFtoQGCvhcSnk97PD5/fj8WUrBS7paDMC57LARnYnj/eoCmDdzE2u53v5+X9ICQIOqoVSmv6RY9Z6pLRqTPwNzAfg+Vl0a9zI57ivJ11w2418xAOQfxlsEBPy0ZNOqA9hAbLD3dZLXr50XAIOoQKLVt+CquaoA4FABkQGALFQbyggAhY2IfBAHSb+0NNbqQt7g7OO1buX1cZUjkm+28t4csBvZ03QIhtXD5hvdwPARAgAHGRr2AE9ngBMQ9NnRH0lmxLb7rBbZxCMJqTbDABCIk1gNmrW+24Fagwz3oh0kCsQ1b7K7UDRpa9/tQD0GVnehrv49AFaBcMnHC4Ag8O59po9KyVX9EQBPwcnqAeauvgJgZkt1V18BMOuRQqq+AmDGZnYNrrMGJbr++eHO1fejAGgPSWVuaFk6TERlwBbAc86T3nUyGciYCUOysSAUBrIqjvjNP+oe2noSosa5LvK38JzPsN5rwHpHixkyYdy0qqsSigwxJk3ZKOpwrVX3AKWEFoqL3+3RB44A+T3zdLsKSAHgqsjsRRvA7IpnDbLVed/jbwmtpmIzsJqBH2ISVjEWJgWZAAAAAElFTkSuQmCC" alt="twitter" class="icon"/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAWFJREFUaEPtmFkOwjAMRNuTAScDTgacDDoSQWnrNIvtLML9QSJp6jdjZ5unwZ958PgnA2jtoDlgDjAVsBRiCsh+/S8cOH9lwu8pIJnrk6vok3jh5f2HdqrPr8uRAwjqugxQGlwuTKj/fWm4hRqPAN5SEQiNc6HcCAGAGOr39CCVALF6KACkzKOnyL1Ydi5QAD2q7xiGB9gVNOUA0qf1zBPK4F0daABAJa0JoAqAE0WjlpIAuPP/1lVpkNX4VApJAyCfUVNuZefO0E0AXNASbjQFkAAxgFgOa+9wmzgguTWvDiBRuL7rUQDuVqL5QsYFwI5R6ySXtBJzAWJFzmkfHiBpO93ziWx4gKQTGXK0xzogr1dCq2aPaUTGGrtalF6ESmYgzDxQn7yhiwH4e3n38e31Ivf8HLpedP8XXy2WqFX9nRQHqgeV80EDyFFLo685oKFqzpjmQI5aGn3NAQ1Vc8b8ALZvQDGD0BclAAAAAElFTkSuQmCC" alt="youtube" class="icon"/>
+        </div>
+        <ul>
+            <li>O nás</li>
+            <li>Naše pobočky</li>
+            <li>Tisk</li>
+            <li>Kontakt</li>
+        </ul>
+        <p class="copyright">&copy; 2025 Vojtěch Kocourek. Všechna práva vyhrazena.</p>
+        <p class="muj-email">kocouvo2@uhk.cz</p>
+    </footer>
 </body>
 </html>

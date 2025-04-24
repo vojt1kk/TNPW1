@@ -29,13 +29,14 @@ button {
     background-position: center;
     width: 100%;
     height: 45vw;
+    position: relative;
 }
 
 /* Back Arrow */
 .fa-arrow-left {
     position: absolute;
     top: 2vw;
-    margin-left: 5vw;
+    left: 5vw;
     font-size: 3vw;
     display: flex;
     align-items: center;
@@ -45,7 +46,6 @@ button {
     border-radius: 50%;
     background-color: transparent;
     color: white;
-    border-color: transparent;
     transition: 0.3s;
 }
 
@@ -266,13 +266,27 @@ li:hover {
     h3 { font-size: 2vw; }
     p { font-size: 1.8vw; }
 
-    .button-primary, .button-secondary, .button-other {
+    .button-primary{
+        height: 6vw;
+        border-radius: 3vw;
+        padding-left: 0.8vw;
+        padding-right: 0.8vw;
         font-size: 1.9vw;
+        outline-offset: 0.7vw;
+        outline-width: 0.5vw;
+    }
+
+    .button-primary:hover{
+        outline-offset: 1.2vw;
     }
 
     .hero{
         background-image: url("images/resin-mobil.png");
         height: 100vw;
+    }
+
+    .nadpis{
+        margin-left: 9.5vw;
     }
 
     .boxy1 {
@@ -288,7 +302,22 @@ li:hover {
         padding: 3.6vw;
     }
 
-    .ac, .bd {
+    .ac-nadpis{
+        margin-left: 9.5vw;
+    }
+
+    .bd-nadpis{
+        margin-left: 9.5vw;
+    }
+
+    .ac{
+        flex-direction: column-reverse;
+        width: 81.2vw;
+        padding: 3vw 0;
+        height: fit-content;
+    }
+
+    .bd{
         flex-direction: column;
         width: 81.2vw;
         padding: 3vw 0;
@@ -301,7 +330,7 @@ li:hover {
     }
 
     .resin-obrazek {
-        width: 30vw;
+        width: 40vw;
     }
 
     li { font-size: 1.8vw; }
