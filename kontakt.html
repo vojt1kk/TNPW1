@@ -4,25 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
-    <link rel="stylesheet" href="form.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="kontakt.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="https://www.hashemian.com/tools/form-post-tester.php" method="post" class="form">
-        <label>
-            Jméno: <input type="text" required="required" name="name">
-        </label>
-        <label>
-            Příjmení: <input type="text" required="required" name="surname">
-        </label>
-        <label>
-            Adresa: <input type="text" required="required" name="adresa">
-        </label>
-        <label>
-            Email: <input type="email" required="required" name="email">
-        </label>
-
-
-        <input type="submit">
-    </form>
+    <form action="/odeslat-poptavku" method="POST" class="space-y-4 max-w-xl mx-auto p-6 bg-white rounded-2xl shadow-md">
+        <h1 class="form-nadpis">Poptávka 3D Tisku</h1>
+      
+        <div>
+          <label for="jmeno" class="block text-sm font-medium text-gray-700">Jméno a příjmení</label>
+          <input type="text" id="jmeno" name="jmeno" required class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm p-2" />
+        </div>
+      
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
+          <input type="email" id="email" name="email" required class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm p-2" />
+        </div>
+      
+        <div>
+          <label for="telefon" class="block text-sm font-medium text-gray-700">Telefon</label>
+          <input type="tel" id="telefon" name="telefon" class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm p-2" />
+        </div>
+      
+        <div>
+          <label for="material" class="block text-sm font-medium text-gray-700">Požadovaný materiál</label>
+          <select id="material" name="material" class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm p-2">
+            <option value="PLA">PLA</option>
+            <option value="PETG">PETG</option>
+            <option value="ABS">ABS</option>
+            <option value="Resin">Resin</option>
+          </select>
+        </div>
+      
+        <div>
+          <label for="popis" class="block text-sm font-medium text-gray-700">Popis součástky / specifikace</label>
+          <textarea id="popis" name="popis" rows="4" class="mt-1 block w-full border-gray-300 rounded-xl shadow-sm p-2"></textarea>
+        </div>
+      
+        <div>
+          <label for="soubor" class="block text-sm font-medium text-gray-700">Přiložit 3D model (.STL, .OBJ)</label>
+          <input type="file" id="soubor" name="soubor" accept=".stl,.obj" class="mt-1 block w-full text-sm text-gray-700" />
+        </div>
+      
+        <div>
+          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-xl shadow hover:bg-blue-700">Odeslat poptávku</button>
+        </div>
+      </form>
 </body>
 </html>

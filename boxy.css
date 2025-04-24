@@ -10,6 +10,18 @@
     margin-bottom: 5vh;
 }
 
+.boxy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+    padding: 0;
+    gap: 1.5vw;
+    margin-bottom: 5vh;
+    position: relative;
+}
+
 .box{
     background-color: #19191c;
     color: white;
@@ -24,7 +36,7 @@
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: normal;
+    position: relative;
 }
 
 .box h3{
@@ -50,7 +62,6 @@
     border-radius: 2vw;
     gap: 4vw;
     margin-bottom: 2vw;
-    padding: 2vw;
 }
 
 .filament-text{
@@ -108,7 +119,6 @@
     border-radius: 2vw;
     gap: 4vw;
     margin-bottom: 2vw;
-    padding: 2vw;
 }
 
 .resin-text{
@@ -146,8 +156,56 @@
     margin-bottom: 5vw;
 }
 
+.ac, .bd {
+    margin: auto;
+    background-color: #19191c;
+    color: white;
+    width: 90vw;
+    height: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    gap: 4vw;
+    margin-bottom: 2vw;
+}
+
+.ac-text, .bd-text {
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+    text-align: justify;
+}
+
+.ac-text {
+    align-items: flex-end;
+}
+
+.bd-text {
+    align-items: flex-start;
+}
+
+.ac-text h2, .bd-text h2 {
+    color: rgb(0, 217, 255);
+}
+
+.ac-img, .bd-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+}
+
 
 @media (min-width: 401px) and (max-width: 800px) {
+    .boxy{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: fit-content;
+        gap: 2vw;
+    }
+
     .boxy1{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -233,9 +291,47 @@
         height: auto;
     }
     
+    .ac-nadpis{
+        margin-left: 9.5vw;
+    }
+
+    .bd-nadpis{
+        margin-left: 9.5vw;
+    }
+
+    .ac{
+        flex-direction: column-reverse;
+        width: 81.2vw;
+        padding: 3vw 0;
+        height: fit-content;
+    }
+
+    .bd{
+        flex-direction: column;
+        width: 81.2vw;
+        padding: 3vw 0;
+        height: fit-content;
+    }
+
+    .ac-img, .bd-img {
+        flex-direction: row;
+        gap: 1vw;
+    }
+
+    .resin-obrazek {
+        width: 40vw;
+    }
+
 }
 
 @media (max-width: 400px){
+    .boxy{
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+        margin-top: -10vw;
+    }
+
     .boxy1{
         display: flex;
         flex-direction: column;
@@ -314,5 +410,35 @@
 
     .resin-nadpis{
         margin-left: 10.4vw;
+    }
+
+    .ac-nadpis, .bd-nadpis{
+        margin-left: 10vw;
+    }
+
+    .ac{
+        flex-direction: column-reverse;
+        width: 75vw;
+        padding-top: 6vw;
+        padding-bottom: 6vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        border-radius: 5vw;
+        height: fit-content;
+    }
+    
+    .bd {
+        flex-direction: column;
+        width: 75vw;
+        padding-top: 6vw;
+        padding-bottom: 6vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        border-radius: 5vw;
+        height: fit-content;
+    }
+
+    .ac-text, .bd-text{
+        text-align: center;
     }
 }

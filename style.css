@@ -4,6 +4,7 @@ body{
     padding: 0;
     overflow-x: hidden;
     background-color: #212121;
+    color: white;
 }
 
 a{
@@ -14,14 +15,6 @@ a{
 a:hover{
     color: #00d9ff;
     transition: 0.3s;
-}
-
-.hero{
-    background-image: url("images/main.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 45vw;
 }
 
 .neoprint-title{
@@ -133,6 +126,56 @@ p{
     font-size: 0.95vw;
 }
 
+.fa-arrow-left {
+    position: absolute;
+    top: 2vw;
+    left: 5vw;
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    transition: 0.3s;
+}
+
+.fa-arrow-left:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+.nadpis{
+    z-index: 1;
+    margin-top: -10vw;
+    margin-left: 5vw;
+}
+
+.fa-arrow-right {
+    z-index: 2;
+    position: absolute;
+    font-size: 2vw;
+    bottom: 1vw;
+    width: 3vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-arrow-right:hover {
+    background-color: white;
+    color: black;
+}
+
+
 @media (min-width: 401px) and (max-width: 800px) {
     h1{
         font-size: 2.8vw;
@@ -151,6 +194,11 @@ p{
         font-size: 1.8vw;
     }
 
+    .nadpis{
+        margin-left: 9.4vw;
+        margin-top: -20vw;
+    }
+
     .button-primary{
         font-size: 1.9vw;
     }
@@ -163,25 +211,6 @@ p{
         font-size: 1.9vw;
     }
 
-    .hero{
-        background-image: url("images/main-mobil.png");
-        height: 90vw;
-    }
-
-    .hero-text{
-        top: 50vw;
-        margin-left: 9.4vw;
-        width: 60%;
-    }
-
-    .hero-text h1{
-        font-size: 3.4vw;
-    }
-
-    .hero-text p{
-        font-size: 2.2vw;
-    }
-
     .button-primary{
         height: 3.4vw;
         border-radius: 1.7vw;
@@ -192,6 +221,29 @@ p{
     .button-secondary{
         height: 3.4vw;
         border-radius: 1.7vw;
+    }
+
+    .fa-arrow-left{
+        font-size: 10vw;
+        top: 8vw;
+        left: 8vw;
+        width: 10vw;
+        height: 10vw;
+        background-color: transparent;
+    }
+
+    .fa-arrow-left:hover{
+        font-size: 10vw;
+        top: 8vw;
+        left: 8vw;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .fa-arrow-right{
+        font-size: 5vw;
+        width: 5vw;
+        height: 5vw;
     }
 }
 
@@ -213,15 +265,10 @@ p{
         font-size: 4vw;
     }
 
-    .hero{
-        background-image: url("images/main-mobil.png");
-        height: 130vw;
-    }
-
-    .hero-text{
-        top: 65vw;
+    .nadpis{
         margin-left: 10.4vw;
-        width: 80%;
+        margin-top: -40vw;
+        margin-bottom: 15vw;
     }
 
     .button-primary{
@@ -258,5 +305,22 @@ p{
 
     .hero-buttons{
         gap: 4vw;
+    }
+
+    .fa-arrow-left{
+        font-size: 10vw;
+        top: 8vw;
+        left: 8vw;
+        width: 10vw;
+        height: 10vw;
+    }
+    .fa-arrow-left:hover{
+        font-size: 10vw;
+    }
+
+    .fa-arrow-right{
+        font-size: 7vw;
+        width: 8vw;
+        height: 8vw;
     }
 }
