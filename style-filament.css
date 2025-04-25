@@ -17,14 +17,14 @@
 
 @media (min-width: 401px) and (max-width: 800px) {
     .hero-filament{
-        background-image: url("images/resin-mobil.png");
+        background-image: url("images/filament-mobil.png");
         height: 100vw;
     }
 }
 
 @media (max-width: 400px){
     .hero-filament{
-        background-image: url("images/resin-mobil.png");
+        background-image: url("images/filament-mobil.png");
         height: 100vw;
     }
     

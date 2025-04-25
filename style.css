@@ -38,7 +38,7 @@ button{
 }
 
 .button-primary{
-    background-color: #ff5100;
+    background-color: #dd2c00;
     font-size: 0.9vw;
     color: white;
     width: fit-content;
@@ -58,8 +58,8 @@ button{
 
 .button-primary:hover{
     background-color: white;
-    color: rgb(255, 81, 0);
-    outline: 0.15vw solid rgb(255, 81, 0);
+    color: #dd2c00;
+    outline: 0.15vw solid #dd2c00;
     outline-offset: 0.4vw;
     transition: background-color 0.3s, color 0.3s, outline-color 0.3s; 
 }
@@ -82,7 +82,7 @@ button{
 
 .button-secondary:hover{
     background-color: rgba(255, 255, 255, 0.8);
-    color: rgb(255, 81, 0);
+    color: #dd2c00;
     outline: 0.15vw solid white;
     outline-offset: 0.4vw;
     transition: background-color 0.3s, color 0.3s, outline-color 0.3s; 
@@ -115,11 +115,8 @@ h1{
 }
 
 h2{
-    font-size: 1.4vw;
-}
-
-h3{
     font-size: 1.2vw;
+    color: #00d9ff;
 }
 
 p{
